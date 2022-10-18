@@ -70,7 +70,7 @@ class APIClient {
       response = axios.get(`${url}`, params);
     }
 
-    //console.log("response: ", JSON.stringify(response.description));
+    console.log("response: ", response);
     return response;
   };
   /**
