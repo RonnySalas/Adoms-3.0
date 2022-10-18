@@ -71,11 +71,11 @@ const EcommerceOrders = () => {
         { label: "Status", value: "Status" },
         { label: "All", value: "All" },
         { label: "Pending", value: "Pending" },
-        { label: "Inprogress", value: "Inprogress" },
+        { label: "Inprogress", value: "Processing" },
         { label: "Cancelled", value: "Cancelled" },
         { label: "Pickups", value: "Pickups" },
         { label: "Returns", value: "Returns" },
-        { label: "Delivered", value: "Delivered" },
+        { label: "Delivered", value: "Complete" },
       ],
     },
   ];
@@ -371,18 +371,21 @@ const EcommerceOrders = () => {
         Header: 'Delivery Status',
         accessor: 'status',
         Cell: (cell) => {
+          console.log("cell: ", cell);
+
           switch (cell.value) {
             case "Pending":
               return <span className="badge text-uppercase badge-soft-warning"> {cell.value} </span>;
-            case "Cancelled":
+            case "cancelled":
+            case "fraud":
               return <span className="badge text-uppercase badge-soft-danger"> {cell.value} </span>;
-            case "Inprogress":
+            case "processing":
               return <span className="badge text-uppercase badge-soft-secondary"> {cell.value} </span>;
             case "Pickups":
               return <span className="badge text-uppercase badge-soft-info"> {cell.value} </span>;
             case "Returns":
               return <span className="badge text-uppercase badge-soft-primary"> {cell.value} </span>;
-            case "Delivered":
+            case "complete":
               return <span className="badge text-uppercase badge-soft-success"> {cell.value} </span>;
             default:
               return <span className="badge text-uppercase badge-soft-warning"> {cell.value} </span>;

@@ -78,8 +78,8 @@ function* getOrders() {
        Authorization: process.env.REACT_APP_API_KEY
      };
     const response = yield call(getOrdersApi,  { headers: headers });
-    console.log("response: ", response);
-    yield put(ecommerceApiResponseSuccess(GET_ORDERS, response.data));
+
+    yield put(ecommerceApiResponseSuccess(GET_ORDERS, response.description));
   } catch (error) {
     yield put(ecommerceApiResponseError(GET_ORDERS, error));
   }
