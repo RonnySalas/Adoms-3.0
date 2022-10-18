@@ -3,7 +3,7 @@ import { Container } from "reactstrap";
 import BreadCrumb from "../../Components/Common/BreadCrumb";
 
 const DashboardEcommerce = () => {
-  document.title = "Dashboard | Velzon - React Admin & Dashboard Template";
+  document.title = "Dashboard | Adoms 3.0 Recargado";
   return (
     <React.Fragment>
       <div className="page-content">

@@ -11,7 +11,7 @@ import {
   getHalfYearRevenueData,
   getYearRevenueData
 }
-  from "../../helpers/fakebackend_helper";
+  from "../../helpers/adomsbackend_helper";
 
 function* getRevenueChartsData({ payload: data }) {
   try {

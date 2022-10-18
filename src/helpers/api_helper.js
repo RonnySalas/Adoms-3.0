@@ -43,6 +43,7 @@ const setAuthorization = (token) => {
   axios.defaults.headers.common["Authorization"] = "Bearer " + token;
 };
 
+
 class APIClient {
   /**
    * Fetches data from given url
@@ -57,12 +58,13 @@ class APIClient {
     let paramKeys = [];
 
     if (params) {
-      Object.keys(params).map(key => {
-        paramKeys.push(key + '=' + params[key]);
+      Object.keys(params).map((key) => {
+        paramKeys.push(key + "=" + params[key]);
         return paramKeys;
       });
 
-      const queryString = paramKeys && paramKeys.length ? paramKeys.join('&') : "";
+      const queryString =
+        paramKeys && paramKeys.length ? paramKeys.join("&") : "";
       response = axios.get(`${url}?${queryString}`, params);
     } else {
       response = axios.get(`${url}`, params);
@@ -73,8 +75,8 @@ class APIClient {
   /**
    * post given data to url
    */
-  create = (url, data) => {
-    return axios.post(url, data);
+  create = (url, data, headers) => {
+    return axios.post(process.env.REACT_APP_API_URL + url, data, headers);
   };
   /**
    * Updates data

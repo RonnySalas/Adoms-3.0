@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Col, Row } from 'reactstrap';
 
 const BreadCrumb = ({ title, pageTitle }) => {
+    console.log("pageTitle: ", pageTitle);
     return (
         <React.Fragment>
             <Row>

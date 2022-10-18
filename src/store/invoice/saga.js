@@ -28,7 +28,7 @@ import {
   addNewInvoice,
   updateInvoice,
   deleteInvoice
-} from "../../helpers/fakebackend_helper";
+} from "../../helpers/adomsbackend_helper";
 
 function* getInvoices() {
   try {

@@ -9,7 +9,7 @@ import { getFirebaseBackend } from "../../../helpers/firebase_helper";
 import {
   postFakeForgetPwd,
   postJwtForgetPwd,
-} from "../../../helpers/fakebackend_helper";
+} from "../../../helpers/adomsbackend_helper";
 
 const fireBaseBackend = getFirebaseBackend();
 

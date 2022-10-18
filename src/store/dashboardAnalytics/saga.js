@@ -22,7 +22,7 @@ import {
   getLastMonthSessionData,
   getCurrentYearSessionData
 }
-  from "../../helpers/fakebackend_helper";
+  from "../../helpers/adomsbackend_helper";
 
 function* getChartsData({ payload: data }) {
   try {

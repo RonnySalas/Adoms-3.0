@@ -3,7 +3,7 @@ import { Dropdown, DropdownItem, DropdownMenu, DropdownToggle } from 'reactstrap
 import { useSelector } from 'react-redux';
 
 //import images
-import avatar1 from "../../assets/images/users/avatar-1.jpg";
+import avatar1 from "../../assets/images/users/yo.jpg";
 
 const ProfileDropdown = () => {
 
@@ -16,7 +16,8 @@ const ProfileDropdown = () => {
     useEffect(() => {
         if (sessionStorage.getItem("authUser")) {
             const obj = JSON.parse(sessionStorage.getItem("authUser"));
-            setUserName(user.first_name || obj.data.first_name || "Admin");
+            console.log("obj: ", obj);
+            setUserName(user.firstName_user || obj.data[0].firstName_user || "Admin");
         }
     }, [userName, user]);
 

@@ -4,6 +4,8 @@ import { Redirect } from "react-router-dom";
 //Dashboard
 import DashboardEcommerce from "../pages/DashboardEcommerce";
 
+import EcommerceOrders from "../pages/Ecommerce/EcommerceOrders/index";
+
 //login
 import Login from "../pages/Authentication/Login";
 import ForgetPasswordPage from "../pages/Authentication/ForgetPassword";
@@ -14,9 +16,9 @@ import Register from "../pages/Authentication/Register";
 import UserProfile from "../pages/Authentication/user-profile";
 
 const authProtectedRoutes = [
-  
   { path: "/dashboard", component: DashboardEcommerce },
   { path: "/index", component: DashboardEcommerce },
+  { path: "/apps-ecommerce-orders", component: EcommerceOrders },
 
   //User Profile
   { path: "/profile", component: UserProfile },
@@ -26,8 +28,8 @@ const authProtectedRoutes = [
   {
     path: "/",
     exact: true,
-    component: () => <Redirect to="/dashboard" />,
-  },
+    component: () => <Redirect to="/dashboard" />
+  }
 ];
 
 const publicRoutes = [
