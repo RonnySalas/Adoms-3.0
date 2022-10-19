@@ -9,7 +9,7 @@ import { getFirebaseBackend } from "../../../helpers/firebase_helper";
 import {
   postFakeRegister,
   postJwtRegister,
-} from "../../../helpers/fakebackend_helper";
+} from "../../../helpers/adomsbackend_helper";
 
 // initialize relavant method of both Auth
 const fireBaseBackend = getFirebaseBackend();

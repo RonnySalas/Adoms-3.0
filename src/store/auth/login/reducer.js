@@ -15,6 +15,7 @@ const initialState = {
 const login = (state = initialState, action) => {
   switch (action.type) {
     case LOGIN_USER:
+
       state = {
         ...state,
         loading: true,
@@ -33,12 +34,15 @@ const login = (state = initialState, action) => {
       state = { ...state, isUserLogout: true };
       break;
     case API_ERROR:
+
       state = {
         ...state,
-        error: action.payload.data,
+        error: action.payload,
         loading: false,
         isUserLogout: false,
       };
+
+      console.log("state: ", action.payload);
       break;
     case RESET_LOGIN_FLAG:
       state = {

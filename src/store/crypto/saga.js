@@ -12,7 +12,7 @@ import {
     getTransationList as getTransationListApi,
     getOrderList as getOrderListApi
 }
-    from "../../helpers/fakebackend_helper";
+    from "../../helpers/adomsbackend_helper";
 
 function* getTransationList() {
     try {

@@ -11,7 +11,7 @@ import {
   gethalfYearMarketplaceData,
   getYearMarketplaceData
 }
-  from "../../helpers/fakebackend_helper";
+  from "../../helpers/adomsbackend_helper";
 
 function* getMarketChartsData({ payload: data }) {
   try {

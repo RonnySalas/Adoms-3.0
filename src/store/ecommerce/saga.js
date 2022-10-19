@@ -61,7 +61,7 @@ import {
   deleteCustomer,
   addNewProduct,
   updateProduct
-} from "../../helpers/fakebackend_helper";
+} from "../../helpers/adomsbackend_helper";
 
 function* getProducts() {
   try {
@@ -74,8 +74,12 @@ function* getProducts() {
 
 function* getOrders() {
   try {
-    const response = yield call(getOrdersApi);
-    yield put(ecommerceApiResponseSuccess(GET_ORDERS, response.data));
+     const headers = {
+       Authorization: process.env.REACT_APP_API_KEY
+     };
+    const response = yield call(getOrdersApi,  { headers: headers });
+
+    yield put(ecommerceApiResponseSuccess(GET_ORDERS, response.description));
   } catch (error) {
     yield put(ecommerceApiResponseError(GET_ORDERS, error));
   }

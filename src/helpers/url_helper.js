@@ -2,7 +2,7 @@
 export const POST_FAKE_REGISTER = "/auth/signup";
 
 //LOGIN
-export const POST_FAKE_LOGIN = "/auth/signin";
+export const POST_LOGIN = "/users?login=true";
 export const POST_FAKE_JWT_LOGIN = "/post-jwt-login";
 export const POST_FAKE_PASSWORD_FORGET = "/auth/forgot-password";
 export const POST_FAKE_JWT_PASSWORD_FORGET = "/jwt-forget-pwd";
@@ -39,7 +39,7 @@ export const ADD_NEW_PRODUCT = "/apps/product";
 export const UPDATE_PRODUCT = "/apps/product";
 
 // Orders
-export const GET_ORDERS = "/apps/order";
+export const GET_ORDERS = "/pedidos";
 export const ADD_NEW_ORDER = "/apps/order";
 export const UPDATE_ORDER = "/apps/order";
 export const DELETE_ORDER = "/apps/order";

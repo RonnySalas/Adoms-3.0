@@ -28,7 +28,7 @@ import {
     updateProjectList,
     deleteProjectList
 }
-    from "../../helpers/fakebackend_helper";
+    from "../../helpers/adomsbackend_helper";
 
 function* getProjectList() {
     try {

@@ -33,7 +33,7 @@ import {
   deleteEvent,
   getCategories,
   getUpCommingEvent
-} from "../../helpers/fakebackend_helper"
+} from "../../helpers/adomsbackend_helper"
 
 function* fetchEvents() {
   try {

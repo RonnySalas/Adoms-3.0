@@ -28,7 +28,7 @@ import {
     updateTeamData,
     deleteTeamData
 }
-    from "../../helpers/fakebackend_helper";
+    from "../../helpers/adomsbackend_helper";
 
 function* getTeamData() {
     try {

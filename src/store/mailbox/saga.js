@@ -15,7 +15,7 @@ import {
 import {
   getMailDetails as getMailDetailsApi,
   deleteMail as deleteMailApi,
-} from "../../helpers/fakebackend_helper";
+} from "../../helpers/adomsbackend_helper";
 
 function* getMailDetails() {
   try {

@@ -77,11 +77,11 @@ import {
 let users = [
   {
     uid: 1,
-    username: "admin",
+    username: "adoms",
     role: "admin",
     password: "123456",
-    email: "admin@themesbrand.com",
-  },
+    email: "adoms@adwise.cl"
+  }
 ];
 
 const fakeBackend = () => {

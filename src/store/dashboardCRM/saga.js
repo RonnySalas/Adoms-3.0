@@ -19,7 +19,7 @@ import {
   getDecSalesData,
   getJanSalesData
 }
-  from "../../helpers/fakebackend_helper";
+  from "../../helpers/adomsbackend_helper";
 
 function* getBalanceChartsData({ payload: data }) {
   try {
