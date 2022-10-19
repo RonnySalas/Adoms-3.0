@@ -14,12 +14,7 @@ import { useFormik } from "formik";
 
 // actions
 import { loginUser,  resetLoginFlag } from "../../store/actions";
-
-//import images
-import logoLight from "../../assets/images/logo-light.png";
-import logoLightLetters from "../../assets/images/logo-light-letters.png";
-
-
+import Logo from '../../Components/Common/Logo';
 
 const Login = (props) => {
     const dispatch = useDispatch();
@@ -27,7 +22,8 @@ const Login = (props) => {
         user: state.Account.user,
     }));
 
-    const [userLogin, setUserLogin] = useState([]);
+  const [userLogin, setUserLogin] = useState([]);
+  const [showPassword, setShowPassword] = useState(false);
 
     useEffect(() => {
         if (user && user) {
@@ -56,6 +52,10 @@ const Login = (props) => {
             dispatch(loginUser(values, props.history));
         }
     });
+  const onShow = ({ currentTarget }) => {
+    setShowPassword(!showPassword);
+  };
+  const switchShow = () => setShowPassword(!showPassword);
 
     const { error } = useSelector(state => ({
         error: state.Login.error,
@@ -67,27 +67,13 @@ const Login = (props) => {
         }, 3000);
     }, [dispatch, error]);
 
-    document.title = "Login | Adoms 3.0 Recargado";
+    document.title = `Login | ${process.env.REACT_APP_TITLE_PAGE}`;
     return (
       <React.Fragment>
         <ParticlesAuth>
           <div className="auth-page-content">
             <Container>
-              <Row>
-                <Col lg={12}>
-                  <div className="text-center mt-sm-5 mb-4 text-white-50">
-                    <div>
-                      <Link to="/" className="d-inline-block auth-logo">
-                        <img src={logoLight} alt="" height="100" />
-                        <img src={logoLightLetters} alt="" height="100" />
-                      </Link>
-                    </div>
-                    <p className="mt-3 fs-15 fw-medium">
-                      Organice y Administre su Ecommerce
-                    </p>
-                  </div>
-                </Col>
-              </Row>
+              <Logo/>
 
               <Row className="justify-content-center">
                 <Col md={8} lg={6} xl={5}>
@@ -144,7 +130,7 @@ const Login = (props) => {
                                 to="/forgot-password"
                                 className="text-muted"
                               >
-                                Forgot password?
+                                Olvidó su Contraseña?
                               </Link>
                             </div>
                             <Label
@@ -157,7 +143,8 @@ const Login = (props) => {
                               <Input
                                 name="password"
                                 value={validation.values.password || ""}
-                                type="password"
+                                type={showPassword ? "text" : "password"}
+
                                 className="form-control pe-5"
                                 placeholder="Enter Password"
                                 onChange={validation.handleChange}
@@ -177,6 +164,7 @@ const Login = (props) => {
                               ) : null}
                               <button
                                 className="btn btn-link position-absolute end-0 top-0 text-decoration-none text-muted"
+                                onClick={switchShow}
                                 type="button"
                                 id="password-addon"
                               >

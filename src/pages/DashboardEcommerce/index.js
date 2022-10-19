@@ -3,7 +3,7 @@ import { Container } from "reactstrap";
 import BreadCrumb from "../../Components/Common/BreadCrumb";
 
 const DashboardEcommerce = () => {
-  document.title = "Dashboard | Adoms 3.0 Recargado";
+  document.title = `Dashboard | ${process.env.REACT_APP_TITLE_PAGE}`;
   return (
     <React.Fragment>
       <div className="page-content">

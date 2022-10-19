@@ -574,7 +574,7 @@ const EcommerceOrders = () => {
 
   const [isExportCSV, setIsExportCSV] = useState(false);
 
-  document.title = "Orders | Velzon - React Admin & Dashboard Template";
+  document.title = `Orders | ${process.env.REACT_APP_TITLE_PAGE}`;
   return (
     <div className="page-content">
       <ExportCSVModal
@@ -680,15 +680,15 @@ const EcommerceOrders = () => {
                           "fw-semibold"
                         )}
                         onClick={() => {
-                          toggleTab("3", "Pickups");
+                          toggleTab("3", "processing");
                         }}
                         href="#"
                       >
                         <i className="ri-truck-line me-1 align-bottom"></i>{" "}
-                        Pickups{" "}
-                        <span className="badge bg-danger align-middle ms-1">
+                        Processing{" "}
+                        {/* <span className="badge bg-danger align-middle ms-1">
                           2
-                        </span>
+                        </span> */}
                       </NavLink>
                     </NavItem>
                     <NavItem>
@@ -698,12 +698,12 @@ const EcommerceOrders = () => {
                           "fw-semibold"
                         )}
                         onClick={() => {
-                          toggleTab("4", "Returns");
+                          toggleTab("4", "pending");
                         }}
                         href="#"
                       >
                         <i className="ri-arrow-left-right-fill me-1 align-bottom"></i>{" "}
-                        Returns
+                        Pending
                       </NavLink>
                     </NavItem>
                     <NavItem>

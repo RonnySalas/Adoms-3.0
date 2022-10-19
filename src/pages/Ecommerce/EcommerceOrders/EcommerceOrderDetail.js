@@ -17,7 +17,7 @@ import EcommerceOrderProduct from "./EcommerceOrderProduct";
 import avatar3 from "../../../assets/images/users/avatar-3.jpg";
 
 const EcommerceOrderDetail = (props) => {
-  document.title="Order Details | Velzon - React Admin & Dashboard Template";
+  document.title = `Order Details | ${process.env.REACT_APP_TITLE_PAGE}`;
 
   const [col1, setcol1] = useState(true);
   const [col2, setcol2] = useState(true);
@@ -37,7 +37,7 @@ const EcommerceOrderDetail = (props) => {
 
   return (
     <div className="page-content">
-      <Container fluid>        
+      <Container fluid>
         <BreadCrumb title="Order Details" pageTitle="Ecommerce" />
 
         <Row>
