@@ -1,5 +1,5 @@
 //REGISTER
-export const POST_FAKE_REGISTER = "/auth/signup";
+export const POST_REGISTER = "/users?register=true";
 
 //LOGIN
 export const POST_LOGIN = "/users?login=true";
