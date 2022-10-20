@@ -30,7 +30,7 @@ const ParticlesAuth = ({ children }) => {
                 <div className="text-center">
                   <p className="mb-0 text-muted">
                     &copy; {new Date().getFullYear()} Adoms. Diseñado y
-                    Desarrolado <img src={logoAdwise} alt="" height="20" /> por
+                    Desarrollado <img src={logoAdwise} alt="" height="20" /> por
                     Adwise
                   </p>
                 </div>

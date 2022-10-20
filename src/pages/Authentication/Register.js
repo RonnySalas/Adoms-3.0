@@ -86,8 +86,8 @@ const Register = () => {
 
                                     <CardBody className="p-4">
                                         <div className="text-center mt-2">
-                                            <h5 className="text-primary">Create New Account</h5>
-                                            <p className="text-muted">Get your free velzon account now</p>
+                                            <h5 className="text-primary">Crear Nueva Cuenta</h5>
+                                            <p className="text-muted">Obtenga su usuario</p>
                                         </div>
                                         <div className="p-2 mt-4">
                                             <Form
@@ -192,8 +192,9 @@ const Register = () => {
                                                 </div>
 
                                                 <div className="mb-4">
-                                                    <p className="mb-0 fs-12 text-muted fst-italic">By registering you agree to the Velzon
-                                                        <Link to="#" className="text-primary text-decoration-underline fst-normal fw-medium">Terms of Use</Link></p>
+                                                    <p className="mb-0 fs-12 text-muted fst-italic">Pronto su usuario será activado por ADWISE.
+                                                        <Link to="#" className="text-primary text-decoration-underline fst-normal fw-medium"> Terminos y condiciones</Link>
+                                                    </p>
                                                 </div>
 
                                                 <div className="mt-4">
@@ -204,7 +205,7 @@ const Register = () => {
                                     </CardBody>
                                 </Card>
                                 <div className="mt-4 text-center">
-                                    <p className="mb-0">Ya tengo una Cuenta ? <Link to="/login" className="fw-semibold text-primary text-decoration-underline"> Login </Link> </p>
+                                    <p className="mb-0">Ya tengo una Cuenta <Link to="/login" className="fw-semibold text-primary text-decoration-underline"> Login </Link> </p>
                                 </div>
                             </Col>
                         </Row>
