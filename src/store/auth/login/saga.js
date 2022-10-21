@@ -6,7 +6,7 @@ import { apiError, loginSuccess, logoutUserSuccess } from "./actions";
 
 //Include Both Helper File with needed methods
 //import { getFirebaseBackend } from "../../../helpers/firebase_helper";
-import { postLogin, postJwtLogin } from "../../../helpers/adomsbackend_helper";
+import { postLogin } from "../../../helpers/adomsbackend_helper";
 
 //const fireBaseBackend = getFirebaseBackend();
 

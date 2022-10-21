@@ -38,7 +38,6 @@ const Login = (props) => {
 
   useEffect(() => {
     if (user && user) {
-      console.log("user: ", user.email_user);
 
       setUserLogin({
         email: user.email_user,
@@ -52,8 +51,8 @@ const Login = (props) => {
     enableReinitialize: false,
 
     initialValues: {
-      email: userLogin.email || "adoms@adwise.cl" || "",
-      password: userLogin.password || "123456" || ""
+      email: userLogin.email || "" || "",
+      password: userLogin.password || "" || ""
     },
     validationSchema: Yup.object({
       email: Yup.string().required("Please Enter Your Email"),
@@ -119,7 +118,7 @@ const Login = (props) => {
                             type="email"
                             onChange={validation.handleChange}
                             onBlur={validation.handleBlur}
-                            value={validation.values.email || ""}
+                            value={userLogin.email || validation.values.email}
                             invalid={
                               validation.touched.email &&
                               validation.errors.email

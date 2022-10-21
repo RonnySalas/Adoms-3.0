@@ -15,6 +15,7 @@ const initialState = {
 };
 
 const Account = (state = initialState, action) => {
+
   switch (action.type) {
     case REGISTER_USER:
       state = {

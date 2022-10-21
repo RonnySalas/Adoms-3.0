@@ -70,16 +70,13 @@ class APIClient {
       response = axios.get(`${url}`, params);
     }
 
-    console.log("response: ", response);
     return response;
   };
   /**
    * post given data to url
    */
   create = (url, data, headers) => {
-    console.log("headers: ", headers);
-    console.log("data: ", data);
-    console.log("url: ", url);
+
     return axios.post(process.env.REACT_APP_API_URL + url, data, headers);
   };
   /**

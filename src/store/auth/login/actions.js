@@ -4,7 +4,6 @@ import {
   LOGOUT_USER,
   LOGOUT_USER_SUCCESS,
   API_ERROR,
-  SOCIAL_LOGIN,
   RESET_LOGIN_FLAG
 } from "./actionTypes";
 
@@ -43,12 +42,6 @@ export const apiError = error => {
   };
 };
 
-export const socialLogin = (data, history, type) => {
-  return {
-    type: SOCIAL_LOGIN,
-    payload: { data, history, type },
-  };
-};
 
 export const resetLoginFlag = () => {
   return {

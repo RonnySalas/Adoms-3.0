@@ -27,7 +27,6 @@ import Logo from "../../Components/Common/Logo";
 const Register = () => {
     const history = useHistory();
     const dispatch = useDispatch();
-
     const validation = useFormik({
         // enableReinitialize : use this flag when initial values needs to be changed
         enableReinitialize: true,
@@ -55,25 +54,28 @@ const Register = () => {
     });
 
     const { error, registrationError, success } = useSelector(state => ({
-        registrationError: state.Account.registrationError,
-        success: state.Account.success,
-        error: state.Account.error
+      registrationError: state.Account.registrationError,
+      success: state.Account.success,
+      error: state.Account.error
     }));
 
+
     useEffect(() => {
-        dispatch(registerUserFailed(""));
+      dispatch(registerUserFailed(""));
     }, [dispatch]);
 
-    useEffect(() => {
-        if (success) {
-            setTimeout(() => history.push("login"), 3000);
-        }
 
-        setTimeout(() => {
-            dispatch(resetRegisterFlag());
-        }, 3000);
+    useEffect(() => {
+      if (success) {
+        setTimeout(() => history.push("login"), 3000);
+      }
+
+      setTimeout(() => {
+        dispatch(resetRegisterFlag());
+      }, 3000);
 
     }, [dispatch, success, error, history]);
+
 
     document.title = `Sign Up | ${process.env.REACT_APP_TITLE_PAGE}`;
 
@@ -103,7 +105,7 @@ const Register = () => {
                         >
                           {success && success ? (
                             <>
-                              {toast("Your Redirect To Login Page...", {
+                              {toast("Serás redirigido a la página de Login...", {
                                 position: "top-right",
                                 hideProgressBar: false,
                                 className: "bg-success text-white",
@@ -112,18 +114,14 @@ const Register = () => {
                               })}
                               <ToastContainer autoClose={2000} limit={1} />
                               <Alert color="success">
-                                Register User Successfully and Your Redirect To
-                                Login Page...
+                                Cuenta Creada Satisfactoriamente, serás redirigido a la página de Login...
                               </Alert>
                             </>
                           ) : null}
 
-                          {error && error ? (
+                          {error && registrationError ? (
                             <Alert color="danger">
-                              <div>
-                                {/* {registrationError} */}
-                                {registrationError}{" "}
-                              </div>
+                              <div>{registrationError}</div>
                             </Alert>
                           ) : null}
 
@@ -243,7 +241,7 @@ const Register = () => {
                             ) : null}
                           </div>
 
-                          <div className="mb-4">
+                          {/* <div className="mb-4">
                             <p className="mb-0 fs-12 text-muted fst-italic">
                               Pronto su usuario será activado por ADWISE.
                               <Link
@@ -254,7 +252,7 @@ const Register = () => {
                                 Terminos y condiciones
                               </Link>
                             </p>
-                          </div>
+                          </div> */}
 
                           <div className="mt-4">
                             <button

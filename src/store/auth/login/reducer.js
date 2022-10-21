@@ -42,7 +42,6 @@ const login = (state = initialState, action) => {
         isUserLogout: false,
       };
 
-      console.log("state: ", action.payload);
       break;
     case RESET_LOGIN_FLAG:
       state = {
